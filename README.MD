@@ -9,7 +9,7 @@
 
 **Problem:** In the case of security bug discover by hackers, all contract funds can be lost. 
 
-**Solution** Set a contract balance limit at risk.
+**Solution** Set a contract balance limit at risk that allows the threshold of amount to manage and validate operations that cannot exceed a predetermined limit.
 
 **Examples:**
-* [Balance-Limit](./Balance-Limit)
+* [Balance-Limit](./contracts/Balance-Limit)

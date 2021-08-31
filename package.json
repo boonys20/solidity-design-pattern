@@ -1,0 +1,25 @@
+{
+  "name": "solidity-design-pattern",
+  "version": "1.0.0",
+  "description": "self learning by design pattern",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boonys20/solidity-design-pattern.git"
+  },
+  "author": "kungdev.s@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boonys20/solidity-design-pattern/issues"
+  },
+  "homepage": "https://github.com/boonys20/solidity-design-pattern#readme",
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.13"
+  }
+}
