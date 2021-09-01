@@ -15,25 +15,26 @@ const BalanceLimit = artifacts.require("BalanceLimit");
  * Ethereum client
  * See docs: https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript
  */
-contract("BalanceLimit", function (/* accounts */) {
+contract("BalanceLimit", function ( accounts ) {
 
-  beforeEach(async function () {
+  const limited = new BN(10);
+
+  beforeEach(async function ( ) {
     this.contract = await BalanceLimit.deployed();
-  });
-
-  it("should revert, Deposit amout is exceed limited.", async function () {
-     const limited = new BN(10);
-     const deposit = new BN(100);
-     await this.contract.LimitBalance(limited);
-     expectRevert(this.contract.deposit({from: web3.eth.defaultAccount, value : deposit}), "Your's deposit amount is exeed limited.");
-  });
-
-  it("should return value of deposit amout is 100.", async function () {
-    const limited = new BN(1000);
-    const deposit = new BN(100);
+    this.depositAcc = accounts[0];
     await this.contract.LimitBalance(limited);
-    let amount = await this.contract.deposit({from: web3.eth.defaultAccount, value : deposit});
-    expectEvent(this.contract.balances({from: web3.eth.defaultAccount})).to.be.eq(amount);
- });
+  });
+
+  it("should reverted, Deposit amout is exceed limited.", async function () {
+     const deposit = new BN(100);
+     expectRevert(this.contract.deposit({from: this.depositAcc, value : deposit}), "Your's deposit amount is exeed limited.");
+  });
+
+  it("should returns value of deposit amout is 100.", async function () {
+    const deposit = new BN(10);
+    await this.contract.deposit({value : deposit});
+    let amount = await this.contract.balances(this.depositAcc);
+    expect(new BN(deposit)).to.be.bignumber.equal(new BN(amount));
+  });
 
 });
