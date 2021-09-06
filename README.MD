@@ -17,7 +17,7 @@
 &emsp;**Problem** In the case contracts can call other contracts to execute their functions (external calls).
 This feature is the baseline for reentrancy1 attack exploitation.
 
-&emsp;**To avoid reentrancy** To avoid reentrancy attacks, every time external calls are needed. Firstly, the caller contract makes validations (checks), secondly makes all necessary internal state changes (effects) and finally makes the external call (interaction).
+&emsp;**Solution** To avoid reentrancy attacks, every time external calls are needed. Firstly, the caller contract makes validations (checks), secondly makes all necessary internal state changes (effects) and finally makes the external call (interaction).
 
 &emsp;**Related patterns** Mutex, Secure ether transfer, Pull payment.
 ## 
@@ -25,4 +25,3 @@ This feature is the baseline for reentrancy1 attack exploitation.
 **Examples:**
 * [Balance Limit](./contracts/BalanceLimit)
 * [Check effects interaction](./contracts/CheckEffectsInteraction)
-
