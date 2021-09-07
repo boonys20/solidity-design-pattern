@@ -5,6 +5,7 @@
 * Security Category
 	* [Balance Limit](#BalanceLimit)
 	* [Check effects interaction](#CheckEffectsInterAction)
+	* [EmergengyStop](#EmergencyStop)
     
 ## <a name="BalanceLimit">Balance Limit</a> [&#8593;](#list-of-patterns)
 
@@ -20,8 +21,15 @@ This feature is the baseline for reentrancy1 attack exploitation.
 &emsp;**Solution** To avoid reentrancy attacks, every time external calls are needed. Firstly, the caller contract makes validations (checks), secondly makes all necessary internal state changes (effects) and finally makes the external call (interaction).
 
 &emsp;**Related patterns** Mutex, Secure ether transfer, Pull payment.
-## 
+##
+
+## <a name="EmergencyStop">Emergency Stop</a> [&#8593;](#list-of-patterns)
+
+&emsp;**Problem** In the case contracts can appear bugs and failures in developed, this pattren allows stopping the function of a contract in emergency situations, like bugs or security issue discovery in critical tasks or functionalities.
+
+&emsp;**Solution** Define contract stoppage functionality. 
 
 **Examples:**
 * [Balance Limit](./contracts/BalanceLimit)
 * [Check effects interaction](./contracts/CheckEffectsInteraction)
+* [Emergency Stop](./contracts/EmergencyStop)
