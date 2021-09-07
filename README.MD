@@ -21,7 +21,6 @@ This feature is the baseline for reentrancy1 attack exploitation.
 &emsp;**Solution** To avoid reentrancy attacks, every time external calls are needed. Firstly, the caller contract makes validations (checks), secondly makes all necessary internal state changes (effects) and finally makes the external call (interaction).
 
 &emsp;**Related patterns** Mutex, Secure ether transfer, Pull payment.
-##
 
 ## <a name="EmergencyStop">Emergency Stop</a> [&#8593;](#list-of-patterns)
 
@@ -29,7 +28,12 @@ This feature is the baseline for reentrancy1 attack exploitation.
 
 &emsp;**Solution** Define contract stoppage functionality. 
 
+## <a name="Mutex">Mutex</a> [&#8593;](#list-of-patterns)
+&emsp;**Problem** In the case Reentrancy vulnerability. External calls make a contract not work correctly.
+
+&emsp;**Solution** Set a locking boolean variable.
+
 **Examples:**
-* [Balance Limit](./contracts/BalanceLimit)
-* [Check effects interaction](./contracts/CheckEffectsInteraction)
-* [Emergency Stop](./contracts/EmergencyStop)
+* [Balance Limit](./contracts/BalanceLimit.sol)
+* [Check effects interaction](./contracts/CheckEffectsInteraction.sol)
+* [Emergency Stop](./contracts/EmergencyStop.sol)
