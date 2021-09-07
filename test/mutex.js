@@ -15,7 +15,8 @@ contract("Mutex", function ( accounts ) {
 
   it("Should call to external contract", async function() {
     let result = await this.contract.f();
-    expect(result).to.be.equal("My Name's Foo");
+    let cStr = web3.utils.keccak256("My Name's Foo");
+    expect(result).to.be.equal(cStr);
   });
 
 });

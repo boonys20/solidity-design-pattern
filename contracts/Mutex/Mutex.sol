@@ -5,8 +5,8 @@ import "./TestMutex.sol";
 
 contract Mutex {
 
-  TestMutex ex_address = new TestMutex();
-  
+  TestMutex exAddr = new TestMutex();
+
   bool locked = false;
 
   modifier onReentrancy {
@@ -18,10 +18,9 @@ contract Mutex {
 
   function f() onReentrancy public returns (bytes memory) {
     bytes memory payload = abi.encodeWithSignature("foo(string)", "My Name's Foo");
-    (bool success, bytes memory returnData) = address(ex_address).call(payload);
+    (bool success, bytes memory returnData) = address(exAddr).call(payload);
     require(success, "Failed to call foo contract.");
     return returnData;
   }
-
 
 }

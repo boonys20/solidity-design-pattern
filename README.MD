@@ -6,6 +6,7 @@
 	* [Balance Limit](#BalanceLimit)
 	* [Check effects interaction](#CheckEffectsInterAction)
 	* [EmergengyStop](#EmergencyStop)
+	* [Mutex](#Mutex)
     
 ## <a name="BalanceLimit">Balance Limit</a> [&#8593;](#list-of-patterns)
 
@@ -37,3 +38,4 @@ This feature is the baseline for reentrancy1 attack exploitation.
 * [Balance Limit](./contracts/BalanceLimit.sol)
 * [Check effects interaction](./contracts/CheckEffectsInteraction.sol)
 * [Emergency Stop](./contracts/EmergencyStop.sol)
+* [Mutex](./contracts/Mutex)
