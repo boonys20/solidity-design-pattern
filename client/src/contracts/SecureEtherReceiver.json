@@ -1,0 +1,194 @@
+{
+  "contractName": "SecureEtherReceiver",
+  "abi": [
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/SecureEtherTransfer/SecureEtherReceiver.sol\":\"SecureEtherReceiver\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/SecureEtherTransfer/SecureEtherReceiver.sol\":{\"keccak256\":\"0xc8df006e576164ee251e2c13b2aedc8b23e85aca0af96a1f2685defa24f99836\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://79da7dc4341d3711859706614f025db96ae199cc13b480a0fdda7eaab4c3e218\",\"dweb:/ipfs/QmQw9rrNC2Kz4gMstgUwDmWziCmbZu2XZ75b5qXbK2LMCU\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50604580601d6000396000f3fe608060405236600a57005b600080fdfea26469706673582212208331099d1dc92283e25a1e50b3be6f6dcba776fdeb63e37947106e8a360170c464736f6c63430008070033",
+  "deployedBytecode": "0x608060405236600a57005b600080fdfea26469706673582212208331099d1dc92283e25a1e50b3be6f6dcba776fdeb63e37947106e8a360170c464736f6c63430008070033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "66:69:6:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "66:69:6:-:0;;;;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract SecureEtherReceiver {\n\n  receive() external payable { }\n  \n}\n",
+  "sourcePath": "C:\\Work Space\\solidity-design-pattern\\contracts\\SecureEtherTransfer\\SecureEtherReceiver.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/SecureEtherTransfer/SecureEtherReceiver.sol",
+    "exportedSymbols": {
+      "SecureEtherReceiver": [
+        389
+      ]
+    },
+    "id": 390,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 384,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:6"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 389,
+        "linearizedBaseContracts": [
+          389
+        ],
+        "name": "SecureEtherReceiver",
+        "nameLocation": "75:19:6",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 387,
+              "nodeType": "Block",
+              "src": "127:3:6",
+              "statements": []
+            },
+            "id": 388,
+            "implemented": true,
+            "kind": "receive",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 385,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "107:2:6"
+            },
+            "returnParameters": {
+              "id": 386,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "127:0:6"
+            },
+            "scope": 389,
+            "src": "100:30:6",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 390,
+        "src": "66:69:6",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:104:6"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/SecureEtherTransfer/SecureEtherReceiver.sol",
+    "exportedSymbols": {
+      "SecureEtherReceiver": [
+        389
+      ]
+    },
+    "id": 390,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 384,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:6"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 389,
+        "linearizedBaseContracts": [
+          389
+        ],
+        "name": "SecureEtherReceiver",
+        "nameLocation": "75:19:6",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 387,
+              "nodeType": "Block",
+              "src": "127:3:6",
+              "statements": []
+            },
+            "id": 388,
+            "implemented": true,
+            "kind": "receive",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 385,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "107:2:6"
+            },
+            "returnParameters": {
+              "id": 386,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "127:0:6"
+            },
+            "scope": 389,
+            "src": "100:30:6",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 390,
+        "src": "66:69:6",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:104:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-09-08T16:04:42.845Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

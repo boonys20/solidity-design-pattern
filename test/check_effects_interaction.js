@@ -7,7 +7,7 @@ const {
 
 const { expect } = require('chai');
 
-const CheckEffectsInteraction = artifacts.require("../contracts/CheckEffectsInteraction/CheckEffectsInteraction.sol");
+const CheckEffectsInteraction = artifacts.require("CheckEffectsInteraction");
 
 /*
  * uncomment accounts to access the test accounts made available by the

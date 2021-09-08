@@ -7,6 +7,8 @@
 	* [Check effects interaction](#CheckEffectsInterAction)
 	* [EmergengyStop](#EmergencyStop)
 	* [Mutex](#Mutex)
+	* [RateLimit](#RateLimit)
+	* [SpeedBump](#SpeedBump)
     
 ## <a name="BalanceLimit">Balance Limit</a> [&#8593;](#list-of-patterns)
 
@@ -34,8 +36,20 @@ This feature is the baseline for reentrancy1 attack exploitation.
 
 &emsp;**Solution** Set a locking boolean variable.
 
+## <a name="RateLimit">RateLimit</a> [&#8593;](#list-of-patterns)
+&emsp;**Problem**
+
+&emsp;**Solution**
+
+## <a name="SpeedBump">RateLimit</a> [&#8593;](#list-of-patterns)
+&emsp;**Problem** A smart contract can break when there is a simultaneous execution of many heavy tasks. 
+
+&emsp;**Solution** Sometimes need to consider sensitive tasks are executed more slowly, according to the contract requirements.
+
 **Examples:**
 * [Balance Limit](./contracts/BalanceLimit.sol)
 * [Check effects interaction](./contracts/CheckEffectsInteraction.sol)
 * [Emergency Stop](./contracts/EmergencyStop.sol)
 * [Mutex](./contracts/Mutex)
+* [RateLimit](./contracts/RateLimit.sol)
+* [SpeedBump](./contracts/SpeedBump.sol)

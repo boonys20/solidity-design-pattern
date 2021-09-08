@@ -12,7 +12,7 @@ contract BalanceLimit {
         limit = _limit;
     }
 
-    modifier limitedPayable() {
+    modifier limitedPayable {
         require(msg.value <= limit, "Your's deposit amount is exeed limited.");
         _;
     }
