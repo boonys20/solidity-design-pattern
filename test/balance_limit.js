@@ -26,14 +26,14 @@ contract("BalanceLimit", function ( accounts ) {
 
   it("should reverted, Deposit amout is exceed limited.", async function () {
      const deposit = new BN(100);
-     expectRevert(this.contract.deposit({from: this.depositAcc, value : deposit}), "Your's deposit amount is exeed limited.");
+     await expectRevert(this.contract.deposit({from: this.depositAcc, value : deposit}), "Your's deposit amount is exeed limited.");
   });
 
   it("should returns value of deposit amout is 100.", async function () {
     const deposit = new BN(10);
     await this.contract.deposit({value : deposit});
     let amount = await this.contract.balances(this.depositAcc);
-    expect(new BN(deposit)).to.be.bignumber.equal(new BN(amount));
+    await expect(new BN(deposit)).to.be.bignumber.equal(new BN(amount));
   });
 
 });

@@ -21,7 +21,6 @@ contract SpeedBump {
   }
 
   function requestWithdrawal(uint256 _amount) public {
-    require(balances[msg.sender] >= _amount, "Your remaining balance is not enough.");
     if (balances[msg.sender] > 0) {
         withdrawals[msg.sender] = Withdrawal({
           amount: _amount,

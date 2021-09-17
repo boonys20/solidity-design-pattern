@@ -1,7 +1,5 @@
 const {
   BN,           // Big Number support
-  constants,    // Common constants, like the zero address and largest integers
-  expectEvent,  // Assertions for emitted events
   expectRevert, // Assertions for transactions that should fail
 } = require('@openzeppelin/test-helpers');
 
@@ -29,12 +27,12 @@ contract("CheckEffectsInteraction", function (accounts) {
 
   it("Should have 5000 tokens in owner address", async function () {
     let amount = await this.contract.balances(this.owner);
-    expect(new BN(amount)).to.be.bignumber.equal(depositAmt);
+    await expect(new BN(amount)).to.be.bignumber.equal(depositAmt);
   });
 
   it("Should failed, your remaining balance is not enough.", async function (){
     let amount = new BN(50000);
-    expectRevert(this.contract.withdraw(amount),"Your remaining balance is not enough.");
+    await expectRevert(this.contract.withdraw(amount),"Your remaining balance is not enough.");
   });
 
 });

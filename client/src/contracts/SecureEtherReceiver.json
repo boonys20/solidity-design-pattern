@@ -12,23 +12,23 @@
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [],
-  "sourceMap": "66:69:6:-:0;;;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "66:69:6:-:0;;;;;;;;;;",
+  "sourceMap": "66:69:8:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "66:69:8:-:0;;;;;;;;;;",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract SecureEtherReceiver {\n\n  receive() external payable { }\n  \n}\n",
   "sourcePath": "C:\\Work Space\\solidity-design-pattern\\contracts\\SecureEtherTransfer\\SecureEtherReceiver.sol",
   "ast": {
     "absolutePath": "project:/contracts/SecureEtherTransfer/SecureEtherReceiver.sol",
     "exportedSymbols": {
       "SecureEtherReceiver": [
-        389
+        546
       ]
     },
-    "id": 390,
+    "id": 547,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 384,
+        "id": 541,
         "literals": [
           "solidity",
           ">=",
@@ -39,7 +39,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:32:6"
+        "src": "32:32:8"
       },
       {
         "abstract": false,
@@ -47,22 +47,22 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 389,
+        "id": 546,
         "linearizedBaseContracts": [
-          389
+          546
         ],
         "name": "SecureEtherReceiver",
-        "nameLocation": "75:19:6",
+        "nameLocation": "75:19:8",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 387,
+              "id": 544,
               "nodeType": "Block",
-              "src": "127:3:6",
+              "src": "127:3:8",
               "statements": []
             },
-            "id": 388,
+            "id": 545,
             "implemented": true,
             "kind": "receive",
             "modifiers": [],
@@ -70,44 +70,44 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 385,
+              "id": 542,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "107:2:6"
+              "src": "107:2:8"
             },
             "returnParameters": {
-              "id": 386,
+              "id": 543,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "127:0:6"
+              "src": "127:0:8"
             },
-            "scope": 389,
-            "src": "100:30:6",
+            "scope": 546,
+            "src": "100:30:8",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 390,
-        "src": "66:69:6",
+        "scope": 547,
+        "src": "66:69:8",
         "usedErrors": []
       }
     ],
-    "src": "32:104:6"
+    "src": "32:104:8"
   },
   "legacyAST": {
     "absolutePath": "project:/contracts/SecureEtherTransfer/SecureEtherReceiver.sol",
     "exportedSymbols": {
       "SecureEtherReceiver": [
-        389
+        546
       ]
     },
-    "id": 390,
+    "id": 547,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 384,
+        "id": 541,
         "literals": [
           "solidity",
           ">=",
@@ -118,7 +118,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:32:6"
+        "src": "32:32:8"
       },
       {
         "abstract": false,
@@ -126,22 +126,22 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 389,
+        "id": 546,
         "linearizedBaseContracts": [
-          389
+          546
         ],
         "name": "SecureEtherReceiver",
-        "nameLocation": "75:19:6",
+        "nameLocation": "75:19:8",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 387,
+              "id": 544,
               "nodeType": "Block",
-              "src": "127:3:6",
+              "src": "127:3:8",
               "statements": []
             },
-            "id": 388,
+            "id": 545,
             "implemented": true,
             "kind": "receive",
             "modifiers": [],
@@ -149,30 +149,30 @@
             "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 385,
+              "id": 542,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "107:2:6"
+              "src": "107:2:8"
             },
             "returnParameters": {
-              "id": 386,
+              "id": 543,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "127:0:6"
+              "src": "127:0:8"
             },
-            "scope": 389,
-            "src": "100:30:6",
+            "scope": 546,
+            "src": "100:30:8",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 390,
-        "src": "66:69:6",
+        "scope": 547,
+        "src": "66:69:8",
         "usedErrors": []
       }
     ],
-    "src": "32:104:6"
+    "src": "32:104:8"
   },
   "compiler": {
     "name": "solc",
@@ -180,7 +180,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-09-08T16:04:42.845Z",
+  "updatedAt": "2021-09-16T14:55:46.871Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

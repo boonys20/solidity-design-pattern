@@ -2,6 +2,9 @@
 
 ## <a name="list-of-patterns">List of Patterns</a>
 
+* Authorization Patterns
+	* [Access Restrictoin](#AccessRestriction)
+
 * Security Category
 	* [Balance Limit](#BalanceLimit)
 	* [Check effects interaction](#CheckEffectsInterAction)
@@ -9,7 +12,14 @@
 	* [Mutex](#Mutex)
 	* [RateLimit](#RateLimit)
 	* [SpeedBump](#SpeedBump)
-    
+	* [AccessRestricton](#AccessRestriction)
+
+## <a name="Access Retriction">Access Restriction</a> [$#8593;](#list-of-patterns)
+
+&emsp;**Problem** Any party can call any contract function.
+
+&emsp;**Solution** Ensure specific tasks are executed only if some predefined requirements are met.
+
 ## <a name="BalanceLimit">Balance Limit</a> [&#8593;](#list-of-patterns)
 
 &emsp;**Problem:** In the case of security bug discover by hackers, all contract funds can be lost. 
@@ -37,14 +47,19 @@ This feature is the baseline for reentrancy1 attack exploitation.
 &emsp;**Solution** Set a locking boolean variable.
 
 ## <a name="RateLimit">RateLimit</a> [&#8593;](#list-of-patterns)
-&emsp;**Problem**
+&emsp;**Problem** Time control and management is the purpose of this pattern, by regulating the frequency of how many times a specific task can be executed during a period.
 
-&emsp;**Solution**
+&emsp;**Solution** Regulate how many times a task can be executed in a time interval.
 
-## <a name="SpeedBump">RateLimit</a> [&#8593;](#list-of-patterns)
+## <a name="SpeedBump">SpeedBump</a> [&#8593;](#list-of-patterns)
 &emsp;**Problem** A smart contract can break when there is a simultaneous execution of many heavy tasks. 
 
 &emsp;**Solution** Sometimes need to consider sensitive tasks are executed more slowly, according to the contract requirements.
+
+## <a name="AccessRestriction">Access Restriction</a> [&#8593;](#list-of-patterns)
+&emsp;**Problem** Sometimes, functions before being executed in Solidity smart contracts, a set of requirements must be met first. 
+
+&emsp;**Solution** create modifiers used to check requirements that can be reused several times in the same contract.
 
 **Examples:**
 * [Balance Limit](./contracts/BalanceLimit.sol)
@@ -53,3 +68,4 @@ This feature is the baseline for reentrancy1 attack exploitation.
 * [Mutex](./contracts/Mutex)
 * [RateLimit](./contracts/RateLimit.sol)
 * [SpeedBump](./contracts/SpeedBump.sol)
+* [Access Retricstion](./contracts/AccessRetriction.sol)

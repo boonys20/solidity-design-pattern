@@ -1,6 +1,5 @@
 const {
   BN,           // Big Number support
-  constants,    // Common constants, like the zero address and largest integers
   expectEvent,  // Assertions for emitted events
   expectRevert, // Assertions for transactions that should fail
 } = require('@openzeppelin/test-helpers');
@@ -14,28 +13,28 @@ const SpeedBump = artifacts.require("SpeedBump");
  */
 contract("SpeedBump", function ( accounts ) {
 
-  const depositAmt = new BN(10000);
+  const depositAmt = new BN(1000);
 
   beforeEach(async function () {
     this.contract = await SpeedBump.deployed();
     this.owner = accounts[0];
 
-    // Deposit 10000 tokens 
+    // Deposit 1000 tokens 
     await this.contract.deposit({from: this.owner, value: depositAmt});
 
   });
 
   it("should have message \" Your asset will be locked at 7 days. \"", async function () {
-    const withdrawAmt = new BN(1000);
-    let logs = await this.contract.requestWithdrawal(withdrawAmt);
+    let withdrawAmt = new BN(100);
+    let logs = await this.contract.requestWithdrawal(new BN(100));
     expectEvent(logs, "Requested", {
       status: true,
       amount: withdrawAmt
-    })
+    });
   });
 
   it("should revert cause you request is less than 7 days.", async function(){
-    expectRevert(this.contract.withdraw({ from: this.owner }), "Your asset will be locked at 7 days.");
+    await expectRevert(this.contract.withdraw({ from: this.owner }), "Your asset will be locked at 7 days.");
   });
 
 });

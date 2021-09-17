@@ -4,6 +4,7 @@ var EmergencyStop = artifacts.require("EmergencyStop");
 var Mutex = artifacts.require("Mutex");
 var RateLimit = artifacts.require("RateLimit");
 var SpeedBump = artifacts.require("SpeedBump");
+var AccessRestriction = artifacts.require("Accessrestriction");
 
 module.exports = function(deployer) {
   deployer.deploy(BalanceLimit);
@@ -12,4 +13,5 @@ module.exports = function(deployer) {
   deployer.deploy(Mutex);
   deployer.deploy(RateLimit);
   deployer.deploy(SpeedBump);
+  deployer.deploy(AccessRestriction);
 };
